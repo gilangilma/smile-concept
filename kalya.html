@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="drg. Kalya Putri, Sp.KG — Dokter Gigi at Smile Concept Dental Clinic." />
+  <title>drg. Kalya Putri, Sp.KG — Smile Concept Dental Clinic</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600&family=Inclusive+Sans&family=Playfair+Display:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#15384f', emphasize: '#d1e7f6', surface: '#e2e1dd' },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            subhead: ['"Familjen Grotesk"', 'sans-serif'],
+            body: ['"Inclusive Sans"', 'sans-serif'],
+          },
+          maxWidth: { shell: '1440px' },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/doctor-detail.css" />
+</head>
+<body class="bg-white text-ink">
+
+  <!-- NAV -->
+  <header class="site-nav" role="banner">
+    <nav class="site-nav__shell" aria-label="Primary">
+      <a href="index.html" class="site-nav__brand" aria-label="Smile Concept — home">
+        <img src="assets/Logo1.png" alt="Smile Concept Dental Clinic" />
+      </a>
+
+      <ul class="site-nav__links">
+        <li><a href="treatments.html">Treatments</a></li>
+        <li><a href="doctors.html" aria-current="page">Doctors</a></li>
+        <li>
+          <a href="promo.html" class="site-nav__link-promo">
+            <img
+              src="assets/Discount.png"
+              alt=""
+              class="site-nav__promo-icon"
+              aria-hidden="true"
+            />
+            Promo
+          </a>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+
+      <div class="site-nav__actions">
+        <a
+          href="https://wa.me/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary button-small"
+          data-cta="nav-whatsapp"
+        >
+          Book Now
+        </a>
+        <button
+          type="button"
+          class="site-nav__toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="site-nav-mobile"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div id="site-nav-mobile" class="site-nav__mobile" hidden>
+      <ul>
+        <li><a href="treatments.html">Treatments</a></li>
+        <li><a href="doctors.html" aria-current="page">Doctors</a></li>
+        <li>
+          <a href="promo.html" class="site-nav__link-promo">
+            <img
+              src="assets/Discount.png"
+              alt=""
+              class="site-nav__promo-icon"
+              aria-hidden="true"
+            />
+            Promo
+          </a>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <a
+        href="https://wa.me/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary button-small site-nav__mobile-cta"
+        data-cta="nav-mobile-whatsapp"
+      >
+        Book Now
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="dd-hero">
+    <div class="max-w-shell mx-auto px-6 md:px-12 lg:px-[116px]">
+      <h1 class="h2 text-ink dd-hero__name">drg. Kalya Putri, Sp.KG</h1>
+      <p class="dd-hero__specialty">Dokter Gigi</p>
+      <div class="dd-schedule">
+        <div class="dd-schedule__slot">
+          <span class="dd-schedule__day">Senin</span>
+          <span class="dd-schedule__time">10:00 – 14:00</span>
+        </div>
+        <div class="dd-schedule__slot">
+          <span class="dd-schedule__day">Jumat</span>
+          <span class="dd-schedule__time">15:00 – 18:00</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFILE CARD -->
+  <section class="dd-profile">
+    <div class="max-w-shell mx-auto px-6 md:px-12 lg:px-[116px]">
+      <div class="dd-card">
+
+        <!-- Photo -->
+        <div class="dd-card__img-wrap">
+          <img src="assets/Kalya.png" alt="drg. Kalya Putri, Sp.KG" class="dd-card__img" />
+        </div>
+
+        <!-- Info -->
+        <div class="dd-card__content">
+
+          <div class="dd-section">
+            <h2 class="dd-section__heading">Pendidikan</h2>
+            <ul class="dd-section__list">
+              <li class="dd-section__item">Pendidikan Dokter Gigi Universitas Indonesia (2012)</li>
+              <li class="dd-section__item">Profesi Dokter Gigi Universitas Indonesia (2012)</li>
+              <li class="dd-section__item">Pendidikan Dokter Gigi Spesialis Konservasi Gigi Universitas Indonesia (2024)</li>
+            </ul>
+          </div>
+
+          <div class="dd-section">
+            <h2 class="dd-section__heading">Speciality</h2>
+            <ul class="dd-section__list">
+              <li class="dd-section__item">Pengobatan gigi sensitif</li>
+              <li class="dd-section__item">Penambalan gigi estetik</li>
+              <li class="dd-section__item">Perawatan saluran akar</li>
+              <li class="dd-section__item">Dental Crown</li>
+              <li class="dd-section__item">Veneer, Bleaching, Smile makeover</li>
+            </ul>
+          </div>
+
+          <a
+            href="https://wa.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary button-large dd-card__cta"
+            data-cta="kalya-consult"
+          >Jadwalkan konsultasi</a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__shell max-w-shell mx-auto px-6 md:px-12 lg:px-[116px]">
+      <div class="footer__brand">
+        <img src="assets/Logo3.png" alt="Smile Concept Dental Clinic" class="footer__logo" />
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h3 class="footer__col-title">Address</h3>
+          <address class="footer__address">Jl. Benda Raya No.5<br>Cilandak Timur, Pasar Minggu<br>Jakarta Selatan, 12560</address>
+          <a href="https://maps.google.com/?q=Jl.+Benda+Raya+No.5+Cilandak+Timur+Pasar+Minggu+Jakarta+Selatan" target="_blank" rel="noopener noreferrer" class="footer__maps-link">See in Google Maps</a>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Reach us</h3>
+          <a href="tel:+622172788888" class="footer__contact-link">+62 21 7278 8888</a>
+          <a href="mailto:hello@smileconcept.id" class="footer__contact-link">hello@smileconcept.id</a>
+          <div class="footer__socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="footer__social-link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.5"/><path d="M10 9l5 3-5 3V9z" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+        <nav class="footer__col footer__col--nav" aria-label="Footer navigation">
+          <a href="doctors.html" class="footer__nav-link">Doctors</a>
+          <a href="treatments.html" class="footer__nav-link">Treatments</a>
+          <a href="promo.html" class="footer__nav-link">Promo</a>
+          <a href="blog.html" class="footer__nav-link">Blog</a>
+        </nav>
+      </div>
+      <hr class="footer__divider" aria-hidden="true" />
+      <p class="footer__copy">© 2026 Smile Concept</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meet our caring doctors at Smile Concept Dental Clinic." />
+  <title>Our Doctors — Smile Concept Dental Clinic</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600&family=Inclusive+Sans&family=Playfair+Display:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#15384f', emphasize: '#d1e7f6', surface: '#e2e1dd' },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            subhead: ['"Familjen Grotesk"', 'sans-serif'],
+            body: ['"Inclusive Sans"', 'sans-serif'],
+          },
+          maxWidth: { shell: '1440px' },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/doctors-page.css" />
+</head>
+<body class="bg-white text-ink">
+
+  <!-- NAV -->
+  <header class="site-nav" role="banner">
+    <nav class="site-nav__shell" aria-label="Primary">
+      <a href="index.html" class="site-nav__brand" aria-label="Smile Concept — home">
+        <img src="assets/Logo1.png" alt="Smile Concept Dental Clinic" />
+      </a>
+
+      <ul class="site-nav__links">
+        <li><a href="treatments.html">Treatments</a></li>
+        <li><a href="doctors.html" aria-current="page">Doctors</a></li>
+        <li>
+          <a href="promo.html" class="site-nav__link-promo">
+            <img
+              src="assets/Discount.png"
+              alt=""
+              class="site-nav__promo-icon"
+              aria-hidden="true"
+            />
+            Promo
+          </a>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+
+      <div class="site-nav__actions">
+        <a
+          href="https://wa.me/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary button-small"
+          data-cta="nav-whatsapp"
+        >
+          Book Now
+        </a>
+        <button
+          type="button"
+          class="site-nav__toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="site-nav-mobile"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div id="site-nav-mobile" class="site-nav__mobile" hidden>
+      <ul>
+        <li><a href="treatments.html">Treatments</a></li>
+        <li><a href="doctors.html" aria-current="page">Doctors</a></li>
+        <li>
+          <a href="promo.html" class="site-nav__link-promo">
+            <img
+              src="assets/Discount.png"
+              alt=""
+              class="site-nav__promo-icon"
+              aria-hidden="true"
+            />
+            Promo
+          </a>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <a
+        href="https://wa.me/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary button-small site-nav__mobile-cta"
+        data-cta="nav-mobile-whatsapp"
+      >
+        Book Now
+      </a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="doc-hero">
+    <div class="max-w-shell mx-auto px-6 md:px-12 lg:px-[116px]">
+      <h1 class="h2 text-ink">Our caring doctors</h1>
+    </div>
+  </section>
+
+  <!-- DOCTOR GRID -->
+  <section class="doc-grid-section" aria-label="Doctor list">
+    <div class="max-w-shell mx-auto px-6 md:px-12 lg:px-[116px]">
+      <div class="doc-grid">
+
+        <!-- 1 -->
+        <article class="doc-card">
+          <div class="doc-card__img-wrap">
+            <img src="assets/Kalya.png" alt="drg. Kalya Putri, Sp.KG" class="doc-card__img" />
+            <div class="doc-card__img-fade" aria-hidden="true"></div>
+          </div>
+          <div class="doc-card__info">
+            <strong class="doc-card__name">drg. Kalya Putri, Sp.KG</strong>
+            <span class="doc-card__specialty">Dokter Gigi</span>
+            <a href="kalya.html" class="doc-card__cta" data-cta="doc-kalya">
+              Lihat profil &amp; jadwal
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="doc-card">
+          <div class="doc-card__img-wrap">
+            <img src="assets/Lidya.png" alt="drg. Lidya Wati Budhy, Sp.Ort" class="doc-card__img" />
+            <div class="doc-card__img-fade" aria-hidden="true"></div>
+          </div>
+          <div class="doc-card__info">
+            <strong class="doc-card__name">drg. Lidya Wati Budhy, Sp.Ort</strong>
+            <span class="doc-card__specialty">Dokter Gigi</span>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="doc-card__cta" data-cta="doc-lidya">
+              Lihat profil &amp; jadwal
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="doc-card">
+          <div class="doc-card__img-wrap">
+            <img src="assets/Grestyasanti.png" alt="drg. Grestyasanti Wimasan, Sp.KG" class="doc-card__img" />
+            <div class="doc-card__img-fade" aria-hidden="true"></div>
+          </div>
+          <div class="doc-card__info">
+            <strong class="doc-card__name">drg. Grestyasanti Wimasan, Sp.KG</strong>
+            <span class="doc-card__specialty">Dokter Gigi</span>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="doc-card__cta" data-cta="doc-grestyasanti">
+              Lihat profil &amp; jadwal
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="doc-card">
+          <div class="doc-card__img-wrap">
+            <img src="assets/Ines.png" alt="drg. Ines Augustina S, Sp.Perio" class="doc-card__img" />
+            <div class="doc-card__img-fade" aria-hidden="true"></div>
+          </div>
+          <div class="doc-card__info">
+            <strong class="doc-card__name">drg. Ines Augustina S, Sp.Perio</strong>
+            <span class="doc-card__specialty">Dokter Gigi</span>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="doc-card__cta" data-cta="doc-ines">
+              Lihat profil &amp; jadwal
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="doc-card">
+          <div class="doc-card__img-wrap">
+            <img src="assets/Awaludin.png" alt="drg. Awaludin Wibawa, Sp.BM" class="doc-card__img" />
+            <div class="doc-card__img-fade" aria-hidden="true"></div>
+          </div>
+          <div class="doc-card__info">
+            <strong class="doc-card__name">drg. Awaludin Wibawa, Sp.BM</strong>
+            <span class="doc-card__specialty">Dokter Gigi</span>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="doc-card__cta" data-cta="doc-awaludin">
+              Lihat profil &amp; jadwal
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="doc-card">
+          <div class="doc-card__img-wrap">
+            <img src="assets/Albar.png" alt="drg. Albar Abshar Muhamad, Sp.Pros" class="doc-card__img" />
+            <div class="doc-card__img-fade" aria-hidden="true"></div>
+          </div>
+          <div class="doc-card__info">
+            <strong class="doc-card__name">drg. Albar Abshar Muhamad, Sp.Pros</strong>
+            <span class="doc-card__specialty">Dokter Gigi</span>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="doc-card__cta" data-cta="doc-albar">
+              Lihat profil &amp; jadwal
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="doc-card">
+          <div class="doc-card__img-wrap">
+            <img src="assets/Qaiszara.png" alt="drg. Qaiszara Puspadewi" class="doc-card__img" />
+            <div class="doc-card__img-fade" aria-hidden="true"></div>
+          </div>
+          <div class="doc-card__info">
+            <strong class="doc-card__name">drg. Qaiszara Puspadewi</strong>
+            <span class="doc-card__specialty">Dokter Gigi</span>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="doc-card__cta" data-cta="doc-qaiszara">
+              Lihat profil &amp; jadwal
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="doc-card">
+          <div class="doc-card__img-wrap">
+            <img src="assets/Kartika.png" alt="drg. Kartika Devy" class="doc-card__img" />
+            <div class="doc-card__img-fade" aria-hidden="true"></div>
+          </div>
+          <div class="doc-card__info">
+            <strong class="doc-card__name">drg. Kartika Devy</strong>
+            <span class="doc-card__specialty">Dokter Gigi</span>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="doc-card__cta" data-cta="doc-kartika">
+              Lihat profil &amp; jadwal
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 9 -->
+        <article class="doc-card">
+          <div class="doc-card__img-wrap">
+            <img src="assets/Julia.png" alt="drg. Julia Dharmawan" class="doc-card__img" />
+            <div class="doc-card__img-fade" aria-hidden="true"></div>
+          </div>
+          <div class="doc-card__info">
+            <strong class="doc-card__name">drg. Julia Dharmawan</strong>
+            <span class="doc-card__specialty">Dokter Gigi</span>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="doc-card__cta" data-cta="doc-julia">
+              Lihat profil &amp; jadwal
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 10 -->
+        <article class="doc-card">
+          <div class="doc-card__img-wrap">
+            <img src="assets/Kevin.png" alt="drg. Kevin Brianshah" class="doc-card__img" />
+            <div class="doc-card__img-fade" aria-hidden="true"></div>
+          </div>
+          <div class="doc-card__info">
+            <strong class="doc-card__name">drg. Kevin Brianshah</strong>
+            <span class="doc-card__specialty">Dokter Gigi</span>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="doc-card__cta" data-cta="doc-kevin">
+              Lihat profil &amp; jadwal
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 11 -->
+        <article class="doc-card">
+          <div class="doc-card__img-wrap">
+            <img src="assets/Benazir.png" alt="drg. Benazir Amriza Dini, Sp.Ort." class="doc-card__img" />
+            <div class="doc-card__img-fade" aria-hidden="true"></div>
+          </div>
+          <div class="doc-card__info">
+            <strong class="doc-card__name">drg. Benazir Amriza Dini, Sp.Ort.</strong>
+            <span class="doc-card__specialty">Dokter Gigi</span>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="doc-card__cta" data-cta="doc-benazir">
+              Lihat profil &amp; jadwal
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BLOCK -->
+  <section class="ctablock" aria-label="Book an appointment">
+    <div class="ctablock__bg" aria-hidden="true"><img src="assets/Background_CTA.png" alt="" /></div>
+    <div class="ctablock__overlay" aria-hidden="true"></div>
+    <img src="assets/Reception.png" alt="" class="ctablock__woman" aria-hidden="true" />
+    <div class="ctablock__content max-w-shell mx-auto px-6 md:px-12 lg:px-[116px]">
+      <h2 class="h2 text-ink">Ready for your new<br>confident smile?</h2>
+      <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="btn-primary button-large ctablock__cta" data-cta="doc-ctablock-whatsapp">Book via WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__shell max-w-shell mx-auto px-6 md:px-12 lg:px-[116px]">
+      <div class="footer__brand">
+        <img src="assets/Logo3.png" alt="Smile Concept Dental Clinic" class="footer__logo" />
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h3 class="footer__col-title">Address</h3>
+          <address class="footer__address">Jl. Benda Raya No.5<br>Cilandak Timur, Pasar Minggu<br>Jakarta Selatan, 12560</address>
+          <a href="https://maps.google.com/?q=Jl.+Benda+Raya+No.5+Cilandak+Timur+Pasar+Minggu+Jakarta+Selatan" target="_blank" rel="noopener noreferrer" class="footer__maps-link">See in Google Maps</a>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Reach us</h3>
+          <a href="tel:+622172788888" class="footer__contact-link">+62 21 7278 8888</a>
+          <a href="mailto:hello@smileconcept.id" class="footer__contact-link">hello@smileconcept.id</a>
+          <div class="footer__socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="footer__social-link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.5"/><path d="M10 9l5 3-5 3V9z" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+        <nav class="footer__col footer__col--nav" aria-label="Footer navigation">
+          <a href="doctors.html" class="footer__nav-link" aria-current="page">Doctors</a>
+          <a href="treatments.html" class="footer__nav-link">Treatments</a>
+          <a href="promo.html" class="footer__nav-link">Promo</a>
+          <a href="blog.html" class="footer__nav-link">Blog</a>
+        </nav>
+      </div>
+      <hr class="footer__divider" aria-hidden="true" />
+      <p class="footer__copy">© 2026 Smile Concept</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

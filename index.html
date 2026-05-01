@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Smile Concept Dental Clinic — personalized care for your better smile." />
+  <title>Smile Concept — Personalized care for your better smile</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600&family=Inclusive+Sans&family=Playfair+Display:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#15384f',
+            emphasize: '#d1e7f6',
+            surface: '#e2e1dd',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            subhead: ['"Familjen Grotesk"', 'sans-serif'],
+            body: ['"Inclusive Sans"', 'sans-serif'],
+          },
+          maxWidth: {
+            shell: '1440px',
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-white text-ink">
+
+  <!-- ============================================================
+       FLOATING NAV
+       ============================================================ -->
+  <header class="site-nav" role="banner">
+    <nav class="site-nav__shell" aria-label="Primary">
+      <a href="index.html" class="site-nav__brand" aria-label="Smile Concept — home">
+        <img src="assets/Logo1.png" alt="Smile Concept Dental Clinic" />
+      </a>
+
+      <ul class="site-nav__links">
+        <li><a href="treatments.html">Treatments</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li>
+          <a href="promo.html" class="site-nav__link-promo">
+            <img
+              src="assets/Discount.png"
+              alt=""
+              class="site-nav__promo-icon"
+              aria-hidden="true"
+            />
+            Promo
+          </a>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+
+      <div class="site-nav__actions">
+        <a
+          href="https://wa.me/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary button-small"
+          data-cta="nav-whatsapp"
+        >
+          Book Now
+        </a>
+        <button
+          type="button"
+          class="site-nav__toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="site-nav-mobile"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div id="site-nav-mobile" class="site-nav__mobile" hidden>
+      <ul>
+        <li><a href="treatments.html">Treatments</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li>
+          <a href="promo.html" class="site-nav__link-promo">
+            <img
+              src="assets/Discount.png"
+              alt=""
+              class="site-nav__promo-icon"
+              aria-hidden="true"
+            />
+            Promo
+          </a>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <a
+        href="https://wa.me/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary button-small site-nav__mobile-cta"
+        data-cta="nav-mobile-whatsapp"
+      >
+        Book Now
+      </a>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero md:min-h-[680px]" aria-labelledby="hero-title">
+
+    <!-- Background -->
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/hero-bg.png" alt="" />
+    </div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__tint" aria-hidden="true"></div>
+
+    <!-- Woman — desktop: full-height absolute right; mobile: hidden -->
+    <img
+      src="assets/woman-hero.png"
+      alt="Smiling young woman holding a phone and a coffee cup"
+      class="hero__woman"
+    />
+
+    <!-- Content shell -->
+    <div class="hero__shell relative max-w-shell mx-auto px-6 md:px-12 lg:px-[116px] pt-24 pb-0 md:pt-28 lg:pt-[190px] md:pb-14 lg:pb-[80px] flex flex-col">
+
+      <!-- Headline group -->
+      <div class="flex flex-col gap-3 w-full min-w-0 md:max-w-[620px]">
+        <p class="h3-subheadline text-ink">Elevating your confidence with a</p>
+
+        <h1
+          id="hero-title"
+          class="hero__headline h1-display text-ink flex flex-row items-center justify-between w-full leading-none"
+        >
+          <span>Better</span>
+          <span class="hero__swoosh inline-flex items-center shrink-0" aria-hidden="true">
+            <svg viewBox="0 0 65 40.0018" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" focusable="false">
+              <path d="M58.2496 20.0024C43.8592 34.3081 21.4946 33.7315 6.75041 20L0 26.7131C18.4672 44.1432 46.8892 44.7172 65 26.7131L58.2496 20.0024Z" fill="#15384F"/>
+            </svg>
+          </span>
+          <span>Smile</span>
+        </h1>
+      </div>
+
+      <!-- Paragraph -->
+      <p class="hero__para body-text text-ink max-w-[680px]">
+        Trusted dental clinic in the heart of Kemang. Friendly, caring and personalized approach to help you thrive.
+      </p>
+
+      <!-- Woman — mobile only, in-flow between para and CTA -->
+      <div class="hero__woman-inline" aria-hidden="true">
+        <img src="assets/woman-hero.png" alt="" />
+      </div>
+
+      <!-- CTA -->
+      <a
+        href="https://wa.me/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hero__cta btn-primary button-large"
+        data-cta="hero-whatsapp"
+      >
+        Book via WhatsApp
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATS BAR
+       ============================================================ -->
+  <section class="statsbar" aria-label="Practice highlights">
+    <div class="statsbar__inner max-w-shell mx-auto px-6 md:px-12 lg:px-[116px]">
+
+      <a
+        href="https://wa.me/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="statsbar__cta btn-primary button-large"
+        data-cta="statsbar-whatsapp"
+      >
+        Book via WhatsApp
+      </a>
+
+
+      <ul class="statsbar__list">
+
+        <li class="statsbar__item">
+          <span class="h3-subheadline">4,9 / 5</span>
+          <span class="caption">Google rating</span>
+        </li>
+
+        <li class="statsbar__divider" aria-hidden="true"></li>
+
+        <li class="statsbar__item">
+          <span class="h3-subheadline">200+</span>
+          <span class="caption">Satisfied patients</span>
+        </li>
+
+        <li class="statsbar__divider" aria-hidden="true"></li>
+
+        <li class="statsbar__item">
+          <span class="h3-subheadline">10+ years</span>
+          <span class="caption">Doctor&rsquo;s experience</span>
+        </li>
+
+        <li class="statsbar__divider" aria-hidden="true"></li>
+
+        <li class="statsbar__item">
+          <span class="h3-subheadline">10+</span>
+          <span class="caption">Insurance partners</span>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TREATMENTS
+       ============================================================ -->
+  <section class="treatments" id="services" aria-labelledby="treatments-title">
+    <div class="treatments__shell max-w-shell mx-auto px-6 md:px-12 lg:px-[116px]">
+
+      <h2 id="treatments-title" class="h2 text-ink treatments__heading">
+        Personalized treatments
+      </h2>
+
+      <div class="treatments__body">
+
+        <!-- Left: image panel -->
+        <div class="treatments__media" aria-live="polite">
+          <div class="treatments__img-wrap">
+            <img
+              src="assets/ModelTreatment1.png"
+              alt="Patient with braces showing a straighter, more balanced smile"
+              class="treatments__img"
+              data-treatment="0"
+            />
+            <img
+              src="assets/ModelTreatment2.png"
+              alt="Patient with a brighter, cleaner-looking smile after whitening"
+              class="treatments__img"
+              data-treatment="1"
+            />
+            <img
+              src="assets/ModelTreatment3.png"
+              alt="Patient with a healthy, lasting smile after dental care"
+              class="treatments__img"
+              data-treatment="2"
+            />
+          </div>
+        </div>
+
+        <!-- Right: category list + CTA -->
+        <div class="treatments__sidebar">
+          <ul class="treatments__list" role="list">
+
+            <li
+              class="treatments__item treatments__item--active"
+              data-index="0"
+              role="button"
+              tabindex="0"
+              aria-pressed="true"
+            >
+              <strong class="treatments__item-title h4">Straighter, more balanced smile</strong>
+              <span class="treatments__item-sub">Braces, Clear Aligners, Bite &amp; Alignment Corrections</span>
+            </li>
+
+            <li
+              class="treatments__item"
+              data-index="1"
+              role="button"
+              tabindex="0"
+              aria-pressed="false"
+            >
+              <strong class="treatments__item-title h4">Brighter, cleaner-looking teeth</strong>
+              <span class="treatments__item-sub">Whitening, Aesthetic Direct Restoration</span>
+            </li>
+
+            <li
+              class="treatments__item"
+              data-index="2"
+              role="button"
+              tabindex="0"
+              aria-pressed="false"
+            >
+              <strong class="treatments__item-title h4">Healthy smile that lasts</strong>
+              <span class="treatments__item-sub">Scaling, Dental Spa</span>
+            </li>
+
+          </ul>
+
+          <a href="treatments.html" class="treatments__cta btn-outline button-large">
+            Explore treatments
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DOCTORS
+       ============================================================ -->
+  <section class="doctors" id="doctors" aria-labelledby="doctors-title">
+    <div class="doctors__shell max-w-shell mx-auto px-6 md:px-12 lg:px-[116px]">
+
+      <!-- Header row -->
+      <div class="doctors__header">
+        <h2 id="doctors-title" class="h2 text-ink">Our doctors</h2>
+        <a href="doctors.html" class="btn-outline button-large doctors__header-cta">
+          Meet all doctors
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Feature columns -->
+      <div class="doctors__features">
+
+        <div class="doctors__feature">
+          <h3 class="h4 text-ink doctors__feature-title">Experienced &amp; Highly Qualified</h3>
+          <p class="caption text-ink">Advanced training with years of hands-on experience.</p>
+        </div>
+
+        <div class="doctors__feature">
+          <h3 class="h4 text-ink doctors__feature-title">Professional &amp; Patient-Focused</h3>
+          <p class="caption text-ink">Empathetic care with integrity and clear guidance.</p>
+        </div>
+
+        <div class="doctors__feature">
+          <h3 class="h4 text-ink doctors__feature-title">Personalized Care</h3>
+          <p class="caption text-ink">Transparent advice tailored to your needs.</p>
+        </div>
+
+      </div>
+
+      <!-- Mobile-only CTA (below features) -->
+      <a href="#" class="btn-outline button-large doctors__mobile-cta">
+        Meet all doctors
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <!-- Photo -->
+      <div class="doctors__photo-wrap">
+        <img
+          src="assets/Doctors.png"
+          alt="The Smile Concept team of doctors"
+          class="doctors__photo"
+        />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRANSFORMATIONS
+       ============================================================ -->
+  <section class="transformations" id="transformations" aria-labelledby="transformations-title">
+    <div class="transformations__shell max-w-shell mx-auto px-6 md:px-12 lg:px-[116px]">
+      <h2 id="transformations-title" class="h2 text-ink transformations__title">Real transformations</h2>
+
+      <div class="transformations__viewport" data-transformations-viewport>
+        <div class="transformations__track" data-transformations-track>
+          <article class="transformations__card">
+            <img src="assets/Before_after.png" alt="Before and after braces treatment" class="transformations__image" />
+            <h3 class="h4 text-ink transformations__card-title">Braces</h3>
+            <p class="caption text-ink transformations__card-desc">Straighter teeth, more confident smile</p>
+          </article>
+
+          <article class="transformations__card">
+            <img src="assets/Before_after.png" alt="Before and after smile alignment treatment" class="transformations__image" />
+            <h3 class="h4 text-ink transformations__card-title">Treatment X</h3>
+            <p class="caption text-ink transformations__card-desc">Description</p>
+          </article>
+
+          <article class="transformations__card">
+            <img src="assets/Before_after.png" alt="Before and after bite correction treatment" class="transformations__image" />
+            <h3 class="h4 text-ink transformations__card-title">Treatment X</h3>
+            <p class="caption text-ink transformations__card-desc">Description</p>
+          </article>
+
+          <article class="transformations__card">
+            <img src="assets/Before_after.png" alt="Before and after whitening treatment" class="transformations__image" />
+            <h3 class="h4 text-ink transformations__card-title">Treatment X</h3>
+            <p class="caption text-ink transformations__card-desc">Description</p>
+          </article>
+
+          <article class="transformations__card">
+            <img src="assets/Before_after.png" alt="Before and after smile restoration treatment" class="transformations__image" />
+            <h3 class="h4 text-ink transformations__card-title">Treatment X</h3>
+            <p class="caption text-ink transformations__card-desc">Description</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="transformations__controls">
+        <div class="transformations__dots" data-transformations-dots aria-label="Transformations slides"></div>
+        <div class="transformations__arrows">
+          <button class="transformations__arrow" type="button" data-transformations-prev aria-label="Previous slide">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 5L7 10L12 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="transformations__arrow" type="button" data-transformations-next aria-label="Next slide">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M8 5L13 10L8 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROMO
+       ============================================================ -->
+  <section class="promo" id="promo" aria-labelledby="promo-title">
+    <div class="promo__shell max-w-shell mx-auto px-6 md:px-12 lg:px-[116px]">
+
+      <!-- Header row -->
+      <div class="promo__header">
+        <h2 id="promo-title" class="h2 text-ink">Limited promo available</h2>
+        <a href="promo.html" class="btn-outline button-large promo__header-cta">
+          See all promos
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Cards -->
+      <div class="promo__grid">
+
+        <article class="promo-card">
+          <div class="promo-card__img-wrap">
+            <img src="assets/promo-card-img1.png" alt="Braces with Orthodontist" class="promo-card__img" />
+            <span class="promo-card__badge caption">40% off</span>
+          </div>
+          <div class="promo-card__body">
+            <h3 class="promo-card__title h4 text-ink">Braces with Orthodontist</h3>
+            <ul class="promo-card__perks caption text-ink">
+              <li>Free konsultasi</li>
+              <li>Free cetak gigi</li>
+              <li>Cicilan 0% Blibli</li>
+            </ul>
+            <div class="promo-card__pricing">
+              <span class="promo-card__price-orig">Rp9.999.000</span>
+              <span class="promo-card__price-curr">Rp5.999.000</span>
+            </div>
+            <a
+              href="https://wa.me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="promo-card__cta btn-primary button-small"
+              data-cta="promo-braces-whatsapp"
+            >Consult now</a>
+          </div>
+        </article>
+
+        <article class="promo-card">
+          <div class="promo-card__img-wrap">
+            <img src="assets/promo-card-img2.png" alt="Promo Behel Damon" class="promo-card__img" />
+            <span class="promo-card__badge caption">23% off</span>
+          </div>
+          <div class="promo-card__body">
+            <h3 class="promo-card__title h4 text-ink">Promo Behel Damon</h3>
+            <ul class="promo-card__perks caption text-ink">
+              <li>Ditangani oleh spesialis ortodonti</li>
+              <li>Free konsultasi &amp; cetak gigi</li>
+              <li>Cicilan 0% Blibli</li>
+            </ul>
+            <div class="promo-card__pricing">
+              <span class="promo-card__price-orig">Rp26.000.000</span>
+              <span class="promo-card__price-curr">Rp21.999.000</span>
+            </div>
+            <a
+              href="https://wa.me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="promo-card__cta btn-primary button-small"
+              data-cta="promo-damon-whatsapp"
+            >Consult now</a>
+          </div>
+        </article>
+
+        <article class="promo-card">
+          <div class="promo-card__img-wrap">
+            <img src="assets/promo-card-img3.png" alt="Scaling" class="promo-card__img" />
+            <span class="promo-card__badge caption">60% off</span>
+          </div>
+          <div class="promo-card__body">
+            <h3 class="promo-card__title h4 text-ink">Scaling</h3>
+            <ul class="promo-card__perks caption text-ink">
+              <li>Free konsultasi</li>
+              <li>Cicilan 0% Blibli</li>
+            </ul>
+            <div class="promo-card__pricing">
+              <span class="promo-card__price-orig">Rp500.000</span>
+              <span class="promo-card__price-curr">Rp200.000</span>
+            </div>
+            <a
+              href="https://wa.me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="promo-card__cta btn-primary button-small"
+              data-cta="promo-scaling-whatsapp"
+            >Consult now</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Divider -->
+      <hr class="promo__divider" aria-hidden="true" />
+
+      <!-- Insurance logos -->
+      <div class="promo__insurance">
+        <p class="promo__insurance-label">We accept insurance</p>
+        <div class="promo__logos-viewport" aria-label="Insurance partners">
+          <div class="promo__logos-track">
+            <ul class="promo__logos promo__logos--marquee" role="list">
+              <li><img src="assets/Allianz.png" alt="Allianz" class="promo__logo" /></li>
+              <li><img src="assets/Zurich.png" alt="Zurich" class="promo__logo" /></li>
+              <li><img src="assets/BCA.png" alt="BCA Life" class="promo__logo" /></li>
+              <li><img src="assets/CHUBB.png" alt="CHUBB" class="promo__logo" /></li>
+              <li><img src="assets/AdMedika.png" alt="AdMedika" class="promo__logo" /></li>
+              <li><img src="assets/AIA.png" alt="AIA" class="promo__logo" /></li>
+            </ul>
+            <ul class="promo__logos promo__logos--marquee" aria-hidden="true" role="presentation">
+              <li><img src="assets/Allianz.png" alt="" class="promo__logo" /></li>
+              <li><img src="assets/Zurich.png" alt="" class="promo__logo" /></li>
+              <li><img src="assets/BCA.png" alt="" class="promo__logo" /></li>
+              <li><img src="assets/CHUBB.png" alt="" class="promo__logo" /></li>
+              <li><img src="assets/AdMedika.png" alt="" class="promo__logo" /></li>
+              <li><img src="assets/AIA.png" alt="" class="promo__logo" /></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FACILITY
+       ============================================================ -->
+  <section class="facility" id="facility" aria-labelledby="facility-title">
+    <div class="facility__shell max-w-shell mx-auto px-6 md:px-12 lg:px-[116px]">
+      <h2 id="facility-title" class="h2 text-ink facility__title">High quality equipment and facility</h2>
+
+      <div class="facility__viewport">
+        <div class="facility__track" data-facility-track>
+          <article class="facility__card">
+            <img src="assets/Facility1.png" alt="Dental treatment room facility" class="facility__image" />
+          </article>
+          <article class="facility__card">
+            <img src="assets/Facility2.png" alt="Close-up of dental equipment" class="facility__image" />
+          </article>
+          <article class="facility__card">
+            <img src="assets/Facility3.png" alt="Dentist team working in clinic facility" class="facility__image" />
+          </article>
+          <article class="facility__card">
+            <img src="assets/Placeholder.png" alt="Facility placeholder image" class="facility__image" />
+          </article>
+          <article class="facility__card">
+            <img src="assets/Placeholder.png" alt="Facility placeholder image" class="facility__image" />
+          </article>
+          <article class="facility__card">
+            <img src="assets/Placeholder.png" alt="Facility placeholder image" class="facility__image" />
+          </article>
+        </div>
+      </div>
+
+      <div class="facility__controls">
+        <div class="facility__dots" data-facility-dots aria-label="Facility slides"></div>
+        <div class="facility__arrows">
+          <button class="facility__arrow" type="button" data-facility-prev aria-label="Previous slide">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 5L7 10L12 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="facility__arrow" type="button" data-facility-next aria-label="Next slide">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M8 5L13 10L8 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial" aria-labelledby="testimonial-title">
+    <div class="testimonial__shell max-w-shell mx-auto px-6 md:px-12 lg:px-[116px]">
+
+      <h2 id="testimonial-title" class="h2 text-ink testimonial__title">What our patients say</h2>
+
+      <div class="testimonial__card">
+        <div class="testimonial__img-wrap">
+          <img src="assets/Testimony.png" alt="Susi, a happy patient" class="testimonial__img" />
+          <div class="testimonial__stars" aria-label="5 out of 5 stars" role="img">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="#F5C518" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 1l2.39 5.26L18 7.27l-4 3.9.94 5.56L10 14l-4.94 2.73L6 11.17 2 7.27l5.61-.51L10 1z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="#F5C518" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 1l2.39 5.26L18 7.27l-4 3.9.94 5.56L10 14l-4.94 2.73L6 11.17 2 7.27l5.61-.51L10 1z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="#F5C518" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 1l2.39 5.26L18 7.27l-4 3.9.94 5.56L10 14l-4.94 2.73L6 11.17 2 7.27l5.61-.51L10 1z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="#F5C518" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 1l2.39 5.26L18 7.27l-4 3.9.94 5.56L10 14l-4.94 2.73L6 11.17 2 7.27l5.61-.51L10 1z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="#F5C518" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 1l2.39 5.26L18 7.27l-4 3.9.94 5.56L10 14l-4.94 2.73L6 11.17 2 7.27l5.61-.51L10 1z"/></svg>
+          </div>
+        </div>
+        <div class="testimonial__content">
+          <p class="testimonial__quote body-text text-ink">
+            So happy with my new bleached teeth. I cannot stop showing them off &amp; the dentist are so nice! Although, it broke my heart when they said drinking too much tea may ruin my teeth :'( haha
+          </p>
+          <div class="testimonial__author">
+            <strong class="testimonial__name h4 text-ink">Susi</strong>
+            <span class="testimonial__role caption text-ink">Marketing Manager at FMCG</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA BLOCK -->
+  <section class="ctablock" aria-label="Book an appointment">
+    <div class="ctablock__bg" aria-hidden="true"><img src="assets/Background_CTA.png" alt="" /></div>
+    <div class="ctablock__overlay" aria-hidden="true"></div>
+    <img src="assets/Reception.png" alt="" class="ctablock__woman" aria-hidden="true" />
+    <div class="ctablock__content max-w-shell mx-auto px-6 md:px-12 lg:px-[116px]">
+      <h2 class="h2 text-ink">Ready for your new<br>confident smile?</h2>
+      <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="btn-primary button-large ctablock__cta" data-cta="ctablock-whatsapp">Book via WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__shell max-w-shell mx-auto px-6 md:px-12 lg:px-[116px]">
+      <div class="footer__brand">
+        <img src="assets/Logo3.png" alt="Smile Concept Dental Clinic" class="footer__logo" />
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h3 class="footer__col-title">Address</h3>
+          <address class="footer__address">Jl. Benda Raya No.5<br>Cilandak Timur, Pasar Minggu<br>Jakarta Selatan, 12560</address>
+          <a href="https://maps.google.com/?q=Jl.+Benda+Raya+No.5+Cilandak+Timur+Pasar+Minggu+Jakarta+Selatan" target="_blank" rel="noopener noreferrer" class="footer__maps-link">See in Google Maps</a>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Reach us</h3>
+          <a href="tel:+622172788888" class="footer__contact-link">+62 21 7278 8888</a>
+          <a href="mailto:hello@smileconcept.id" class="footer__contact-link">hello@smileconcept.id</a>
+          <div class="footer__socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="footer__social-link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.5"/><path d="M10 9l5 3-5 3V9z" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+        <nav class="footer__col footer__col--nav" aria-label="Footer navigation">
+          <a href="#doctors" class="footer__nav-link">Doctors</a>
+          <a href="treatments.html" class="footer__nav-link">Treatments</a>
+          <a href="promo.html" class="footer__nav-link">Promo</a>
+          <a href="blog.html" class="footer__nav-link">Blog</a>
+        </nav>
+      </div>
+      <hr class="footer__divider" aria-hidden="true" />
+      <p class="footer__copy">© 2026 Smile Concept</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

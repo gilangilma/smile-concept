@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Treatment Detail Page
+   ========================================================================== */
+
+/* ── Hero ── */
+.td-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 640px;
+  background-color: #ffffff;
+}
+
+.td-hero__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+  padding: 148px 56px 80px 116px;
+}
+
+.td-hero__right {
+  overflow: hidden;
+  position: relative;
+}
+
+.td-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* CTA */
+.td-hero__left .btn-primary {
+  align-self: flex-start;
+}
+
+/* Tags */
+.td-hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.td-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background-color: #D1E7F6;
+  color: var(--color-ink);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+  font-family: 'Inclusive Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+/* ── Proven Results ── */
+.td-results {
+  background-color: var(--color-emphasize);
+  padding: 80px 0 96px;
+}
+
+.td-results__heading {
+  margin-bottom: 40px;
+}
+
+.td-results__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Result card */
+.td-result-card__imgs {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.td-result-card__imgs img {
+  width: 100%;
+  display: block;
+}
+
+.td-result-card__label {
+  font-family: 'Inclusive Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--color-ink);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1023px) {
+  .td-hero__left {
+    padding: 140px 40px 72px 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .td-hero {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+
+  .td-hero__left {
+    padding: 120px 24px 48px;
+    order: 1;
+  }
+
+  .td-hero__right {
+    order: 2;
+    height: 320px;
+  }
+
+  .td-results {
+    padding: 56px 0 72px;
+  }
+
+  .td-results__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

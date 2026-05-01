@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Promo Page
+   ========================================================================== */
+
+/* ── Page hero ── */
+.promo-hero {
+  background-color: var(--color-surface);
+  padding: 160px 0 64px;
+}
+
+@media (max-width: 767px) {
+  .promo-hero { padding: 120px 0 48px; }
+}
+
+/* ── Grid section ── */
+.promo-page-section {
+  background-color: #ffffff;
+  padding: 72px 0 96px;
+}
+
+@media (max-width: 767px) {
+  .promo-page-section { padding: 48px 0 64px; }
+}

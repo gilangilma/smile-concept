@@ -1,0 +1,165 @@
+/* ==========================================================================
+   Treatments Page
+   ========================================================================== */
+
+/* ── Page hero ── */
+.tx-hero {
+  background-color: var(--color-surface);
+  padding: 160px 0 64px;
+}
+
+@media (max-width: 767px) {
+  .tx-hero { padding: 120px 0 48px; }
+}
+
+.tx-hero__title {
+  margin-bottom: 20px;
+}
+
+.tx-hero__para {
+  max-width: 640px;
+}
+
+/* ── Category section ── */
+.tx-cat {
+  background-color: #ffffff;
+  padding: 72px 0 80px;
+}
+
+.tx-cat--alt {
+  background-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .tx-cat { padding: 48px 0 56px; }
+}
+
+.tx-cat__title {
+  margin-bottom: 32px;
+}
+
+/* Category body: image + items side by side */
+.tx-cat__body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* When image is on the right (category 2), items are naturally first in DOM */
+.tx-cat--img-right .tx-cat__body {
+  grid-template-columns: 2fr 1fr;
+}
+
+@media (max-width: 767px) {
+  .tx-cat__body,
+  .tx-cat--img-right .tx-cat__body {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* On mobile, image always goes after the items */
+  .tx-cat--img-right .tx-cat__img-wrap {
+    order: 2;
+  }
+  .tx-cat--img-right .tx-items {
+    order: 1;
+  }
+}
+
+/* Category image */
+.tx-cat__img-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background-color: var(--color-surface);
+}
+
+.tx-cat__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* ── Treatment items grid ── */
+.tx-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 767px) {
+  .tx-items {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+/* Individual treatment item */
+.tx-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  border: 1px solid rgba(21, 56, 79, 0.12);
+  border-radius: 12px;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: var(--color-ink);
+  transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.tx-cat--alt .tx-item {
+  background-color: #ffffff;
+}
+
+.tx-item:hover {
+  border-color: var(--color-ink);
+  background-color: var(--color-emphasize);
+  transform: translateY(-1px);
+}
+
+.tx-item__text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.tx-item__name {
+  font-family: 'Familjen Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: var(--color-ink);
+}
+
+.tx-item__sub {
+  font-family: 'Inclusive Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: rgba(21, 56, 79, 0.6);
+}
+
+.tx-item__arrow {
+  flex-shrink: 0;
+  color: var(--color-ink);
+  opacity: 0.5;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.tx-item:hover .tx-item__arrow {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+/* Active nav link */
+.site-nav__links a[aria-current="page"] {
+  font-weight: 600;
+}
