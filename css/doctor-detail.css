@@ -143,6 +143,12 @@
 @media (max-width: 767px) {
   .dd-card {
     grid-template-columns: 1fr;
+    max-height: none;
+  }
+
+  .dd-card__cta {
+    width: 100%;
+    justify-content: center;
   }
 
   .dd-card__img-wrap {

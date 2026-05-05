@@ -500,8 +500,29 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
   background-color: rgba(209, 231, 246, 0.6);
 }
 
-.site-nav__mobile-cta {
+.site-nav__mobile .site-nav__link-promo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.site-nav__mobile .site-nav__mobile-cta {
+  display: inline-flex;
   width: 100%;
+  color: #ffffff;
+  background-color: var(--color-ink);
+  border-radius: 9999px;
+  font-family: 'Familjen Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  transition: background-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
+}
+
+.site-nav__mobile .site-nav__mobile-cta:hover {
+  background-color: #0f2a3d;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px -8px rgba(21, 56, 79, 0.45);
 }
 
 @media (min-width: 900px) {
@@ -580,6 +601,10 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
   .statsbar__divider {
     display: none;
   }
+
+  /* Swap: Doctor's experience before Satisfied patients */
+  .statsbar__item:nth-child(3) { order: 3; }
+  .statsbar__item:nth-child(5) { order: 2; }
 }
 
 /* ==========================================================================
@@ -596,7 +621,7 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
 }
 
 .treatments__heading {
-  margin-bottom: 48px;
+  margin-bottom: 80px;
 }
 
 @media (max-width: 767px) {
@@ -723,6 +748,13 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
 
 /* ── CTA ── */
 
+@media (max-width: 767px) {
+  .treatments__cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .btn-outline {
   display: inline-flex;
   align-items: center;
@@ -783,7 +815,7 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 48px;
+  margin-bottom: 80px;
 }
 
 @media (max-width: 767px) {
@@ -826,7 +858,6 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  margin-top: 80px;
 }
 
 
@@ -834,7 +865,6 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
   .doctors__features {
     grid-template-columns: 1fr;
     gap: 28px;
-    margin-top: 40px;
   }
   .doctors__photo-wrap { margin-top: 40px; }
 }
@@ -851,6 +881,7 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
   .doctors__header-cta { display: none; }
   .doctors__mobile-cta {
     display: inline-flex;
+    justify-content: center;
     margin-top: 32px;
   }
 }
@@ -883,7 +914,7 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 48px;
+  margin-bottom: 80px;
 }
 
 @media (max-width: 767px) {
@@ -1107,6 +1138,7 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
 .promo__logo {
   height: 48px;
   width: auto;
+  max-width: 140px;
   display: block;
   object-fit: contain;
 }
@@ -1174,7 +1206,7 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
 }
 
 .transformations__title {
-  margin-bottom: 48px;
+  margin-bottom: 80px;
 }
 
 @media (max-width: 767px) {
@@ -1183,6 +1215,12 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
 
 .transformations__viewport {
   overflow: hidden;
+  cursor: grab;
+  user-select: none;
+}
+
+.transformations__viewport.is-dragging {
+  cursor: grabbing;
 }
 
 .transformations__track {
@@ -1202,7 +1240,7 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
 }
 
 @media (min-width: 1024px) {
-  .transformations__track { --cards-visible: 4; }
+  .transformations__track { --cards-visible: 3.3; }
 }
 
 .transformations__card {
@@ -1291,7 +1329,6 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
    ========================================================================== */
 
 .facility {
-  background-color: var(--color-surface);
   padding: 80px 0 100px;
 }
 
@@ -1300,7 +1337,7 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
 }
 
 .facility__title {
-  margin-bottom: 48px;
+  margin-bottom: 80px;
 }
 
 @media (max-width: 767px) {
@@ -1309,6 +1346,12 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
 
 .facility__viewport {
   overflow: hidden;
+  cursor: grab;
+  user-select: none;
+}
+
+.facility__viewport.is-dragging {
+  cursor: grabbing;
 }
 
 .facility__track {
@@ -1328,7 +1371,7 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
 }
 
 @media (min-width: 1024px) {
-  .facility__track { --cards-visible: 4; }
+  .facility__track { --cards-visible: 3.3; }
 }
 
 .facility__card {
@@ -1418,7 +1461,7 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
 }
 
 .testimonial__title {
-  margin-bottom: 48px;
+  margin-bottom: 80px;
 }
 
 @media (max-width: 767px) {

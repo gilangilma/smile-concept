@@ -170,6 +170,53 @@
     });
 
     window.addEventListener('resize', update);
+
+    // ── Drag & swipe support (mouse + touch) ──
+    const viewport = transformations.querySelector('[data-transformations-viewport]');
+    let dragStartX = 0;
+    let dragStartTranslate = 0;
+    let isDragging = false;
+
+    const getBaseTranslate = () => {
+      const cardWidth = cards[0].getBoundingClientRect().width;
+      return -page * (cardWidth + 20);
+    };
+
+    const startDrag = (clientX) => {
+      isDragging = true;
+      dragStartX = clientX;
+      dragStartTranslate = getBaseTranslate();
+      track.style.transition = 'none';
+      viewport.classList.add('is-dragging');
+    };
+
+    const moveDrag = (clientX) => {
+      if (!isDragging) return;
+      track.style.transform = `translateX(${dragStartTranslate + (clientX - dragStartX)}px)`;
+    };
+
+    const endDrag = (clientX) => {
+      if (!isDragging) return;
+      isDragging = false;
+      viewport.classList.remove('is-dragging');
+      track.style.transition = '';
+      const delta = clientX - dragStartX;
+      if (delta < -40) page = Math.min(pages - 1, page + 1);
+      else if (delta > 40) page = Math.max(0, page - 1);
+      update();
+    };
+
+    // Mouse
+    viewport.addEventListener('mousedown', (e) => startDrag(e.clientX));
+    window.addEventListener('mousemove', (e) => { if (isDragging) moveDrag(e.clientX); });
+    window.addEventListener('mouseup', (e) => endDrag(e.clientX));
+    viewport.addEventListener('dragstart', (e) => e.preventDefault());
+
+    // Touch
+    viewport.addEventListener('touchstart', (e) => startDrag(e.touches[0].clientX), { passive: true });
+    viewport.addEventListener('touchmove', (e) => { if (isDragging) moveDrag(e.touches[0].clientX); }, { passive: true });
+    viewport.addEventListener('touchend', (e) => endDrag(e.changedTouches[0].clientX), { passive: true });
+
     update();
   }
 
@@ -245,6 +292,53 @@
     });
 
     window.addEventListener('resize', update);
+
+    // ── Drag & swipe support (mouse + touch) ──
+    const facilityViewport = facility.querySelector('.facility__viewport');
+    let facDragStartX = 0;
+    let facDragStartTranslate = 0;
+    let facIsDragging = false;
+
+    const getFacBaseTranslate = () => {
+      const cardWidth = facilityCards[0].getBoundingClientRect().width;
+      return -page * (cardWidth + 12);
+    };
+
+    const facStartDrag = (clientX) => {
+      facIsDragging = true;
+      facDragStartX = clientX;
+      facDragStartTranslate = getFacBaseTranslate();
+      facilityTrack.style.transition = 'none';
+      facilityViewport.classList.add('is-dragging');
+    };
+
+    const facMoveDrag = (clientX) => {
+      if (!facIsDragging) return;
+      facilityTrack.style.transform = `translateX(${facDragStartTranslate + (clientX - facDragStartX)}px)`;
+    };
+
+    const facEndDrag = (clientX) => {
+      if (!facIsDragging) return;
+      facIsDragging = false;
+      facilityViewport.classList.remove('is-dragging');
+      facilityTrack.style.transition = '';
+      const delta = clientX - facDragStartX;
+      if (delta < -40) page = Math.min(pages - 1, page + 1);
+      else if (delta > 40) page = Math.max(0, page - 1);
+      update();
+    };
+
+    // Mouse
+    facilityViewport.addEventListener('mousedown', (e) => facStartDrag(e.clientX));
+    window.addEventListener('mousemove', (e) => { if (facIsDragging) facMoveDrag(e.clientX); });
+    window.addEventListener('mouseup', (e) => facEndDrag(e.clientX));
+    facilityViewport.addEventListener('dragstart', (e) => e.preventDefault());
+
+    // Touch
+    facilityViewport.addEventListener('touchstart', (e) => facStartDrag(e.touches[0].clientX), { passive: true });
+    facilityViewport.addEventListener('touchmove', (e) => { if (facIsDragging) facMoveDrag(e.touches[0].clientX); }, { passive: true });
+    facilityViewport.addEventListener('touchend', (e) => facEndDrag(e.changedTouches[0].clientX), { passive: true });
+
     update();
   }
 })();
