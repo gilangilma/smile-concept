@@ -97,7 +97,10 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
     font-size: 26px;
     line-height: 1.25;
   }
-  /* body, caption, buttons stay constant */
+  .caption {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 /* ==========================================================================
@@ -866,7 +869,7 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
     grid-template-columns: 1fr;
     gap: 28px;
   }
-  .doctors__photo-wrap { margin-top: 40px; }
+  .doctors__photo-wrap { margin-top: 0; }
 }
 
 .doctors__feature-title {
@@ -886,9 +889,6 @@ body { font-family: 'Inclusive Sans', sans-serif; color: var(--color-ink); }
   }
 }
 
-.doctors__photo-wrap {
-  margin-top: 64px;
-}
 
 /* ==========================================================================
    Promo

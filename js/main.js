@@ -146,17 +146,17 @@
         dot.dataset.active = String(i === page);
       });
 
-      prevBtn.disabled = page === 0;
-      nextBtn.disabled = page >= pages - 1;
+      prevBtn.disabled = false;
+      nextBtn.disabled = false;
     };
 
     prevBtn.addEventListener('click', () => {
-      page = Math.max(0, page - 1);
+      page = (page - 1 + pages) % pages;
       update();
     });
 
     nextBtn.addEventListener('click', () => {
-      page = Math.min(pages - 1, page + 1);
+      page = (page + 1) % pages;
       update();
     });
 
@@ -201,8 +201,8 @@
       viewport.classList.remove('is-dragging');
       track.style.transition = '';
       const delta = clientX - dragStartX;
-      if (delta < -40) page = Math.min(pages - 1, page + 1);
-      else if (delta > 40) page = Math.max(0, page - 1);
+      if (delta < -40) page = (page + 1) % pages;
+      else if (delta > 40) page = (page - 1 + pages) % pages;
       update();
     };
 
@@ -268,17 +268,17 @@
         dot.dataset.active = String(i === page);
       });
 
-      facilityPrevBtn.disabled = page === 0;
-      facilityNextBtn.disabled = page >= pages - 1;
+      facilityPrevBtn.disabled = false;
+      facilityNextBtn.disabled = false;
     };
 
     facilityPrevBtn.addEventListener('click', () => {
-      page = Math.max(0, page - 1);
+      page = (page - 1 + pages) % pages;
       update();
     });
 
     facilityNextBtn.addEventListener('click', () => {
-      page = Math.min(pages - 1, page + 1);
+      page = (page + 1) % pages;
       update();
     });
 
@@ -323,8 +323,8 @@
       facilityViewport.classList.remove('is-dragging');
       facilityTrack.style.transition = '';
       const delta = clientX - facDragStartX;
-      if (delta < -40) page = Math.min(pages - 1, page + 1);
-      else if (delta > 40) page = Math.max(0, page - 1);
+      if (delta < -40) page = (page + 1) % pages;
+      else if (delta > 40) page = (page - 1 + pages) % pages;
       update();
     };
 
