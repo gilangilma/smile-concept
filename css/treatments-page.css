@@ -83,6 +83,10 @@
   display: block;
 }
 
+.tx-cat__img--category-1 {
+  object-position: 68% center;
+}
+
 /* ── Treatment items grid ── */
 .tx-items {
   display: grid;

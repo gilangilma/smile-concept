@@ -256,7 +256,7 @@
       page = Math.min(page, pages - 1);
 
       const cardWidth = facilityCards[0].getBoundingClientRect().width;
-      const gap = 12;
+      const gap = parseFloat(getComputedStyle(facilityTrack).columnGap) || 20;
       facilityTrack.style.transform = `translateX(${-page * (cardWidth + gap)}px)`;
 
       const dots = facilityDotsWrap.querySelectorAll('.facility__dot');
@@ -299,9 +299,11 @@
     let facDragStartTranslate = 0;
     let facIsDragging = false;
 
+    const getFacGap = () => parseFloat(getComputedStyle(facilityTrack).columnGap) || 20;
+
     const getFacBaseTranslate = () => {
       const cardWidth = facilityCards[0].getBoundingClientRect().width;
-      return -page * (cardWidth + 12);
+      return -page * (cardWidth + getFacGap());
     };
 
     const facStartDrag = (clientX) => {
