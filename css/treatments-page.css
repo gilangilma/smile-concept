@@ -131,12 +131,13 @@
   flex-direction: column;
   gap: 3px;
   min-width: 0;
+  font-size: 16px;
 }
 
 .tx-item__name {
   font-family: 'Familjen Grotesk', sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 16px !important;
   line-height: 1.3;
   letter-spacing: 0;
   color: var(--color-ink);
@@ -145,7 +146,7 @@
 .tx-item__sub {
   font-family: 'Inclusive Sans', sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px !important;
   line-height: 1.4;
   letter-spacing: 0.02em;
   color: rgba(21, 56, 79, 0.6);

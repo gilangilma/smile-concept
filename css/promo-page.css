@@ -18,6 +18,10 @@
   padding: 72px 0 96px;
 }
 
+.promo-page-section .promo-card__price-range {
+  white-space: normal;
+}
+
 @media (max-width: 767px) {
   .promo-page-section { padding: 48px 0 64px; }
 }
